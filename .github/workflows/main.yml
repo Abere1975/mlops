@@ -1,4 +1,4 @@
-name: cli-jobs-pipelines-autom-mpg
+name: cli-jobs-pipelines-auto-mpg
 on:
   workflow_dispatch:
   schedule:
@@ -21,7 +21,7 @@ jobs:
     - name: azure login
       uses: azure/login@v1
       with:
-        creds: ${{secrets.AZURE_CREDENTIALS}}
+        creds: ${{secrets.Azure_credentials-secret}}
     - name: setup
       run: bash setup.sh
       continue-on-error: true
